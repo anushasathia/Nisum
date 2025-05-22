@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            margin-top: -50px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #2c5282;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        span {
+            font-weight: 600;
+            color: #007bff;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Array Methods Challenge</h1>
+        <p>Original array: <span id="original"></span></p>
+        <p>Squares of even numbers: <span id="result"></span></p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const numbers = [10,20,45,25,90,29,99,34,54,88];
+            
+            const squaresOfEvens = numbers
+                .filter(num => num % 2 === 0)
+                .map(evenNum => evenNum ** 2);
+            
+            document.getElementById('original').textContent = numbers.join(', ');
+            document.getElementById('result').textContent = squaresOfEvens.join(', ');
+        };
+    </script>
+</body>
+</html>
