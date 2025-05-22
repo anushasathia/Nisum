@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #fe8e05;
+            color: white;
+            border: none;
+            border-radius: 8px; 
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #323833;
+            transform: translateY(-2px); 
+        }
+        button:active {
+            background-color: #b8dab9;
+            transform: translateY(0); 
+        }
+        #messageDisplay {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="submitBtn">Submit</button>
+    <div id="messageDisplay"></div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const messageDisplay = document.getElementById('messageDisplay');
+            messageDisplay.textContent = 'Submitted!'; 
+          
+            setTimeout(() => {
+                messageDisplay.textContent = '';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
