@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Car Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2fe;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 8px;
+            color: #1f2937;
+            border: none;
+            background-color: #e5e7eb;
+        }
+
+        button:hover {
+            background-color: #d1d5db;
+            box-shadow: none;
+        }
+
+        .speed-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+
+        #currentSpeedDisplay {
+            margin-top: 30px;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0d9488;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .log-heading {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        #outputHistory {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #4b5563;
+            max-height: 200px;
+            overflow-y: auto;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 15px;
+            text-align: left;
+        }
+
+        #outputHistory p {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .button-container {
+                margin-bottom: 16px;
+            }
+            button {
+                font-size: 1rem;
+                padding: 10px 20px;
+                margin: 5px;
+            }
+            .speed-label {
+                font-size: 1.125rem;
+            }
+            #currentSpeedDisplay {
+                font-size: 2.5rem;
+            }
+            .log-heading {
+                font-size: 1rem;
+                margin-top: 16px;
+                margin-bottom: 8px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle Dynamics Simulator</h1>
+        <div class="button-container">
+            <button id="accelerateBtn">Step on the Gas!</button>
+            <button id="decelerateBtn">Brake Gently</button>
+            <button id="stopBtn">Emergency Stop</button>
+        </div>
+
+        <p class="speed-label">Current Speed:</p>
+        <div id="currentSpeedDisplay">0 km/h</div>
+
+        <h2 class="log-heading">Action Log:</h2>
+        <div id="outputHistory">
+            </div>
+    </div>
+
+    <script>
+        class Car {
+            constructor(brand) {
+                this.brand = brand;
+                this.speed = 0;
+                this.maxSpeed = 200;
+            }
+
+            accelerate() {
+                this.speed = Math.min(this.speed + 10, this.maxSpeed);
+                this.logAction(The ${this.brand} is smoothly accelerating.);
+            }
+
+            decelerate() {
+                this.speed = Math.max(this.speed - 10, 0);
+                this.logAction(Applying brakes on the ${this.brand}.);
+            }
+
+            stop() {
+                this.speed = 0;
+                this.logAction(The ${this.brand} has come to a complete stop.);
+            }
+
+            logAction(message) {
+                const outputHistory = document.getElementById('outputHistory');
+                const currentSpeedDisplay = document.getElementById('currentSpeedDisplay');
+
+                currentSpeedDisplay.textContent = ${this.speed} km/h;
+
+                const p = document.createElement('p');
+                p.textContent = ${message} Current speed: ${this.speed} km/h;
+                outputHistory.prepend(p);
+
+                if (outputHistory.children.length > 10) {
+                    outputHistory.removeChild(outputHistory.lastChild);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const myCar = new Car('Creta');
+
+            const accelerateBtn = document.getElementById('accelerateBtn');
+            const decelerateBtn = document.getElementById('decelerateBtn');
+            const stopBtn = document.getElementById('stopBtn');
+
+            accelerateBtn.addEventListener('click', () => {
+                myCar.accelerate();
+            });
+
+            decelerateBtn.addEventListener('click', () => {
+                myCar.decelerate();
+            });
+
+            stopBtn.addEventListener('click', () => {
+                myCar.stop();
+            });
+
+            myCar.logAction(Welcome! Your ${myCar.brand} is ready.);
+        });
+    </script>
+</body>
+</html>
