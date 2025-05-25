@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 1fr);   
+  max-width: 600px;
+  margin: auto;
+}
+
+.item {
+  background-color: rgb(219, 15, 83);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 24px;
+  border-radius: 8px;
+}
