@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.item-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.item-details {
+    flex: 2;
+    padding: 10px;
+}
+
+.item-details h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.item-details .brand {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.item-details select {
+    margin-left: 5px;
+}
+
+.in-stock {
+    color: green;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buttons button:hover {
+    background-color: #ddd;
+}
+
+.price-section {
+    flex: 1;
+    padding: 10px;
+    text-align: right;
+}
+
+.price {
+    font-size: 18px;
+    color: #e53935;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 8px;
+}
+
+.discount {
+    color: green;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.next-page-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.next-page-container button {
+    background-color: #ff2d75;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.next-page-container button:hover {
+    background-color: #e02368;
+}

@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.billing-address-box, .payment-method-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.promo-code {
+    display: flex;
+    gap: 10px;
+}
+
+.promo-code input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.apply-btn {
+    background-color: #ff2d75;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #e02368;
+}
+
+.place-order {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.place-order-btn {
+    background-color: #ff2d75;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.place-order-btn:hover {
+    background-color: #e02368;
+}

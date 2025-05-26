@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Delivery Address</title>
+    <link rel="stylesheet" href="../css/ThirdPage.css">
+</head>
+<body>
+<div class="container">
+    <h2>Select a Delivery Address</h2>
+    <div id ="addressList">
+
+    </div>
+
+    <div id="newAddressForm" class="address-form">
+        <h3>Add New Delivery Location</h3>
+        <form id="addressForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="addressLine1">Address Line 1</label>
+                <input type="text" id="addressLine1" required>
+            </div>
+            <div class="form-group">
+                <label for="addressLine2">Address Line 2 (Optional)</label>
+                <input type="text" id="addressLine2">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State/Province/Region</label>
+                <input type="text" id="state" required>
+            </div>
+            <div class="form-group">
+                <label for="zipCode">ZIP Code</label>
+                <input type="text" id="zipCode" required>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+                <button type="submit" class="save-btn">Save Address</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="buttons">
+        <button class="secondary-btn">Show more addresses</button>
+        <button class="primary-btn" id="addAddressBtn">Add a New Delivery Location</button>
+    </div>
+</div>
+<script src="../js/ThirdPage.js"></script>
+</body>
+</html>

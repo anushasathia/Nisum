@@ -1,0 +1,56 @@
+.mainheading{
+    color: rgb(108, 169, 16);
+    font-size: 25px;
+    text-align: center;
+}
+.mainheadingtext{
+    color: rgb(142, 138, 138);
+    font-size:20px;
+    text-align: center;
+}
+h2{
+    font-size: 23px;
+}
+
+.order,.instructions,.rewards,.email-confirmation{
+    background-color: rgb(245, 242, 242);
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 0.3);
+
+}
+p,h3{
+    padding: 0;
+    margin: 0;
+}
+h3{
+    font-size: 18px;
+}
+
+.rewards{
+    background-color: rgb(194, 237, 194);
+}
+#checkout{
+    text-align: center;
+    margin: 30px;
+}
+button{
+    background-color: #ff2d75;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    border: 0;
+    font-size: 17px;
+}
+body{
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+body{
+    background-color: #fdfdfd;
+
+}

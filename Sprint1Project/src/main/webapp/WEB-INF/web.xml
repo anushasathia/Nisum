@@ -1,0 +1,48 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>CartItemServlet</servlet-name>
+    <servlet-class>com.nisum.controller.CartItemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartItemServlet</servlet-name>
+    <url-pattern>/addCartItem</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitialCartItemServlet</servlet-name>
+    <servlet-class>com.nisum.controller.InitialCartItemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitialCartItemServlet</servlet-name>
+    <url-pattern>/getInitialCartItem</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ShoppingCartServlet</servlet-name>
+    <servlet-class>com.nisum.controller.ShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShoppingCartServlet</servlet-name>
+    <url-pattern>/getShoppingCart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserAddress</servlet-name>
+    <servlet-class>com.nisum.controller.UserAddressesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserAddress</servlet-name>
+    <url-pattern>/UserAddress</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Restart</servlet-name>
+    <servlet-class>com.nisum.controller.RestartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Restart</servlet-name>
+    <url-pattern>/Restart</url-pattern>
+  </servlet-mapping>
+</web-app>
