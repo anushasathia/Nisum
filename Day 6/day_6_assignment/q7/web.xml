@@ -1,0 +1,8 @@
+<context-param>
+    <param-name>appName</param-name>
+    <param-value>MyAwesomeApp</param-value>
+</context-param>
+<context-param>
+    <param-name>appVersion</param-name>
+    <param-value>1.0.0</param-value>
+</context-param>
