@@ -1,0 +1,5 @@
+Time: 2025-06-09 21:28:33
+Problem in Thread: main
+Error Type: java.lang.ArithmeticException
+Message: / by zero
+More Details: java.lang.ArithmeticException: / by zero
