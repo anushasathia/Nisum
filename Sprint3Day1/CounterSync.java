@@ -1,0 +1,28 @@
+public class CounterSync {
+    static int sharedCount = 0;
+
+    public synchronized static void inc() {
+        sharedCount++;
+    }
+
+    public static void main(String[] args) throws Exception {
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                inc();
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                inc();
+            }
+        });
+
+        t1.start();
+        t2.start();
+        t1.join();
+        t2.join();
+
+        System.out.println("fixed count: " + sharedCount);
+    }
+}
